@@ -12,3 +12,5 @@ export const AD_MIDPOINT_ANGLE = Math.cos((Math.PI * 2 * 45) / 360);
 export const INNER_AD_MIDPOINT = INNER_AD_RADIUS * AD_MIDPOINT_ANGLE;
 export const MID_AD_MIDPOINT = MID_AD_RADIUS * AD_MIDPOINT_ANGLE;
 export const OUTER_AD_MIDPOINT = OUTER_AD_RADIUS * AD_MIDPOINT_ANGLE;
+
+export const PAGE_SLUG = "/dont-miss-out-prod";

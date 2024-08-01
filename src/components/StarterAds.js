@@ -4,6 +4,7 @@ import Ad from "@/components/Ad";
 import { useState, useEffect, useRef } from "react";
 import { PositionalAudio } from "@react-three/drei";
 import SaleText from "@/components/SaleText";
+import { PAGE_SLUG } from "@/data/constants";
 
 const StarterAds = () => {
   const [sale, setSale] = useState(false);
@@ -42,7 +43,7 @@ const StarterAds = () => {
     <>
       <PositionalAudio
         ref={soundRef}
-        url={"/sound/soundEffects/On Sale.mp3"}
+        url={`${PAGE_SLUG}/sound/soundEffects/On Sale.mp3`}
         distance={10}
       />
       {Object.keys(ads).map((key, index) => {

@@ -2,6 +2,7 @@ import { useState, useRef } from "react";
 import { PositionalAudio } from "@react-three/drei";
 import { RigidBody } from "@react-three/rapier";
 import AnimatedMesh from "@/components/AnimatedMesh";
+import { PAGE_SLUG } from "@/data/constants";
 
 const WebcamProduct = ({ position, rotation, boxSize, children }) => {
   const [clicked, setClicked] = useState(false);
@@ -23,7 +24,7 @@ const WebcamProduct = ({ position, rotation, boxSize, children }) => {
     <>
       <PositionalAudio
         ref={soundRef}
-        url={"/sound/soundEffects/Recycle.mp3"}
+        url={`${PAGE_SLUG}/sound/soundEffects/Recycle.mp3`}
         loop={false}
         setVolume={0.3}
         distance={5}

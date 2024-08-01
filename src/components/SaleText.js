@@ -1,3 +1,4 @@
+import { PAGE_SLUG } from "@/data/constants";
 import { randomAdPositionRotation } from "@/utils/helpers";
 import { Text3D, Float } from "@react-three/drei";
 
@@ -11,7 +12,7 @@ const SaleText = () => {
       <Text3D
         position={positionRotation["position"]}
         rotation={rotation}
-        font={"/Inter_Regular.json"}
+        font={`${PAGE_SLUG}/Inter_Regular.json`}
         bevelEnabled
         bevelSize={0.05}
         height={0.5}

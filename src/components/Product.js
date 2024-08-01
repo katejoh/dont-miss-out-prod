@@ -3,6 +3,7 @@ import { products } from "@/data/models";
 import { PositionalAudio, useGLTF } from "@react-three/drei";
 import { RigidBody } from "@react-three/rapier";
 import AnimatedMesh from "@/components/AnimatedMesh";
+import { PAGE_SLUG } from "@/data/constants";
 
 const Product = ({ product, position, rotation }) => {
   const [clicked, setClicked] = useState(false);
@@ -27,7 +28,7 @@ const Product = ({ product, position, rotation }) => {
     <>
       <PositionalAudio
         ref={soundRef}
-        url={"/sound/soundEffects/Recycle.mp3"}
+        url={`${PAGE_SLUG}/sound/soundEffects/Recycle.mp3`}
         loop={false}
         setVolume={0.3}
         distance={5}
