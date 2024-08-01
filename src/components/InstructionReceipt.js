@@ -88,7 +88,7 @@ const InstructionReceipt = () => {
 
   return (
     <ReceiptBackground>
-      <ReceiptTitle>DON'T MISS OUT</ReceiptTitle>
+      <ReceiptTitle>DON&apos;T MISS OUT</ReceiptTitle>
       <ReceiptSubheading>
         Thank you for coming back online on {getDate()} at {getTime()}
       </ReceiptSubheading>

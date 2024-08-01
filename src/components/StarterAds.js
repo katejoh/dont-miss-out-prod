@@ -10,7 +10,6 @@ const StarterAds = () => {
   const [saleAd, setSaleAd] = useState("");
 
   const soundRef = useRef();
-  const adKeys = Object.keys(ads);
 
   const playSound = () => {
     if (!soundRef.current.isPlaying) {
@@ -22,6 +21,8 @@ const StarterAds = () => {
   };
 
   useEffect(() => {
+    const adKeys = Object.keys(ads);
+
     const toggleSale = setInterval(() => {
       const saleChance = Math.random() < 0.3;
       if (saleChance) {
