@@ -17,7 +17,7 @@ const StarterAds = () => {
       soundRef.current.play();
       setTimeout(() => {
         soundRef.current?.stop();
-      }, 2000);
+      }, 3000);
     }
   };
 

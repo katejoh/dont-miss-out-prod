@@ -2,7 +2,7 @@
 
 import styled, { css } from "styled-components";
 import { Icon } from "@iconify/react";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { ads } from "@/data/images";
 
 const ViewportContainer = styled.section`
@@ -28,18 +28,13 @@ const LoadingIconContainer = styled.section`
 `;
 
 const SkipLoadingButton = styled.button`
-  ${(props) => {
-    return css`
-      opacity: ${props.$opacity};
-      transition: opacity 2s;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 10px 15px;
-      border: none;
-      border-radius: 10px;
-    `;
-  }}
+  transition: opacity 2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 10px;
 
   &:hover {
     cursor: pointer;
@@ -63,14 +58,7 @@ const AdImage = styled.img`
 `;
 
 const LoadingPage = () => {
-  const [skipVisible, setSkipVisible] = useState(false);
   const [adImageData, setAdImageData] = useState([]);
-
-  useEffect(() => {
-    setTimeout(() => {
-      setSkipVisible(true);
-    }, 10000);
-  }, []);
 
   const createAd = () => {
     const randomAdKey =
@@ -116,10 +104,7 @@ const LoadingPage = () => {
           <Icon icon="line-md:loading-loop" width="100px" height="100px" />
           <h1>Loading...</h1>
         </LoadingIconContainer>
-        <SkipLoadingButton
-          $opacity={skipVisible ? "1" : "0"}
-          onClick={createAd}
-        >
+        <SkipLoadingButton onClick={createAd}>
           Skip
           <Icon
             icon="material-symbols-light:skip-next-outline"
